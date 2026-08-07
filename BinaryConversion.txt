@@ -1,0 +1,32 @@
+public class BinaryConversion {
+
+    static int decimal(String s){
+
+        int num=0;
+
+        for(int i=0;i<s.length();i++)
+            num=num*2+(s.charAt(i)-'0');
+
+        return num;
+    }
+
+    static void octal(int n){
+
+        if(n>7)
+            octal(n/8);
+
+        System.out.print(n%8);
+    }
+
+    public static void main(String args[]) {
+
+        String binary="1101";
+
+        int dec=decimal(binary);
+
+        System.out.println("Decimal = "+dec);
+
+        System.out.print("Octal = ");
+        octal(dec);
+    }
+}

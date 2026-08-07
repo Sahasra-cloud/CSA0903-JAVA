@@ -1,0 +1,25 @@
+public class DecimalConversion {
+
+    static void binary(int n){
+        if(n>1)
+            binary(n/2);
+        System.out.print(n%2);
+    }
+
+    static void octal(int n){
+        if(n>7)
+            octal(n/8);
+        System.out.print(n%8);
+    }
+
+    public static void main(String args[]) {
+
+        int n=15;
+
+        System.out.print("Binary = ");
+        binary(n);
+
+        System.out.print("\nOctal = ");
+        octal(n);
+    }
+}

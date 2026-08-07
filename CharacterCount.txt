@@ -1,0 +1,24 @@
+public class CharacterCount {
+    public static void main(String args[]) {
+
+        char a[] = {'W','d','A','G','g','H'};
+
+        int upper=0, lower=0, number=0;
+
+        for(int i=0;i<a.length;i++){
+
+            if(a[i]>='A' && a[i]<='Z')
+                upper++;
+
+            else if(a[i]>='a' && a[i]<='z')
+                lower++;
+
+            else if(a[i]>='0' && a[i]<='9')
+                number++;
+        }
+
+        System.out.println("Upper Case = " + upper);
+        System.out.println("Lower Case = " + lower);
+        System.out.println("Numbers = " + number);
+    }
+}
